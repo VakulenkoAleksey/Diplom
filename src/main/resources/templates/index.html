@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<!--<head th:replace="base :: head(~{::title})">-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/shards.min.css">
+</head>
+<body>
+
+
+<header th:fragment="header">
+    <br>
+    <div class="form-group col-md-6">
+        <a href="/">
+            <button type="submit" class="btn btn-primary">Home</button>
+        </a>
+<!--    </div>-->
+<!--    <div class="form-group col-md-6">-->
+        <a href="/client/showAll">
+            <button type="submit" class="btn btn-primary">All clients</button>
+        </a>
+    </div>
+</header>
+<br>
+<br>
+
+<form action="/client/phone" method="get">
+    <div class="form-group col-md-6">
+        <label for="phone" class="col-form-label"></label>
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="Поиск по номеру телефона">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+<div>
+    <p class="form-group col-md-6"><a href="/client/add" class="btn btn-primary"> Add<i
+            class="fas fa-user-plus ml-2"></i></a></p>
+</div>
+</body>
+</html>
+
+
